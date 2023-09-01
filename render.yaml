@@ -1,7 +1,0 @@
-services:
-  - name: university-search-app
-    type: web
-    buildCommand: npm install && npm run build
-    startCommand: ng serve
-    env: node
-    port: 8080
