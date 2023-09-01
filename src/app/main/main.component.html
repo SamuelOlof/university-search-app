@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="container__sidebar">
+      <h3>Results Count</h3>
+      <p>{{ universities.length }}</p>
+    </div>
+  
+    <div class="container__main-content">
+      <div class="search-bar">
+        <label for="countryInput">Search by Country:</label>
+        <input id="countryInput" [(ngModel)]="country" (input)="getUniversitiesByCountry();" placeholder="Enter a country">
+      </div>
+  
+      <div class="filter-bar">
+        <label for="filterInput">Filter by University Name:</label>
+        <input id="filterInput" [(ngModel)]="filterText" (input)="applyFilter()" placeholder="Enter a keyword">
+      </div>
+      
+      <h2>Universities in {{ country }}</h2>
+      <ul class="university-list">
+        <li *ngFor="let university of universities">
+          {{ university.name }}
+        </li>
+      </ul>
+
+      <div *ngIf="loading" class="loading-indicator">
+        Loading...
+        </div>
+    </div>
+</div>
+  
+

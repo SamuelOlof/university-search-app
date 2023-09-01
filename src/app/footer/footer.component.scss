@@ -1,0 +1,22 @@
+.footer{
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+   
+    &__content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+      a{
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+    }
+  }
+  
+  
+  
